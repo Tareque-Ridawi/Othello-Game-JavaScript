@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVERSI • Minimax AI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>REVERSI</h1>
+        <div class="subtitle">Powered by Minimax AI</div>
+        
+        <div class="game-info">
+            <div class="score-panel active" id="playerPanel">
+                <div class="score-label">Player (Cyan)</div>
+                <div class="score-value" id="playerScore">2</div>
+            </div>
+            <div class="status" id="status">Your Turn</div>
+            <div class="score-panel ai" id="aiPanel">
+                <div class="score-label">AI (Magenta)</div>
+                <div class="score-value" id="aiScore">2</div>
+            </div>
+        </div>
+        
+        <div class="board-container">
+            <div class="board" id="board"></div>
+        </div>
+        
+        <div class="controls">
+            <button onclick="game.newGame()">New Game</button>
+        </div>
+        
+        <div class="difficulty-selector">
+            <button class="difficulty-btn" onclick="game.setDifficulty(2)" data-level="2">Easy</button>
+            <button class="difficulty-btn active" onclick="game.setDifficulty(4)" data-level="4">Medium</button>
+            <button class="difficulty-btn" onclick="game.setDifficulty(6)" data-level="6">Hard</button>
+            <button class="difficulty-btn" onclick="game.setDifficulty(8)" data-level="8">Expert</button>
+        </div>
+    </div>
+
+    <!-- JavaScript files in order of dependency -->
+    <script src="constants.js"></script>
+    <script src="board.js"></script>
+    <script src="minimax.js"></script>
+    <script src="ai.js"></script>
+    <script src="ui.js"></script>
+    <script src="game.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
